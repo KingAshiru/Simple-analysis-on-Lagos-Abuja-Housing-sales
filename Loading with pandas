@@ -1,0 +1,23 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+houses = pd.read_csv('nigeriaprop_houses1.csv')
+houses_df = pd.DataFrame(houses)
+houses_df['Price'] = houses_df['Price'].replace('[\,]', '', regex=True).astype(int)
+df_10 = houses_df.iloc[:10]
+df_10.plot(x ='Price', y= ['Bedroom','Bathroom','Toilet','Parking'], kind = 'bar')
+plt.xlabel('Prices (in Naira)')
+plt.ylabel('Number of rooms and parking space')
+plt.title('Properties (Lagos & Abuja)')
+plt.text(0.05,6,'Lekki')
+plt.text(0.5,5,'Lekki')
+plt.text(1.5,5,'Lekki')
+plt.text(2.5,5,'Lekki')
+plt.text(3.5,6,'Lugbedist')
+plt.text(4.5,5,'Lekki')
+plt.text(5.5,4,'Utako')
+plt.text(6.5,5,'Magodo')
+plt.text(7,6,'Surulere')
+plt.text(8.5,6,'Gwarinpa')
+plt.show()
+houses_df.plot(x='Price',y=['Bedroom','Bathroom','Toilet','Parking'],kind='bar')
+plt.show()
