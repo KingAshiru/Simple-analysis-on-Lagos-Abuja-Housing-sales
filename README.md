@@ -1,5 +1,5 @@
 # Simple Data Visualization
-In this repo we perform a simple analysis on housing data in Lagos and Abuja
+In this project we perform a simple analysis on housing data in Lagos and Abuja
 This project is divided into two parts as follows:
 - Web Scraping: this is done to acquire the needed data (houses,location,rooms,prices,etc.) from a property agency (NigeriaProperty.com was used for this).
 BeautifulSoup and the Selenium frameworks is used for the purpose of this scraping. The data acquired is then stored in a csv file.
